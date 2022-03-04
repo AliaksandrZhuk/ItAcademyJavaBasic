@@ -1,5 +1,12 @@
 public class Main {
     public static void main(String[] args) {
-        System.out.println("Hello,word");
+        boolean y = false;
+        int x = 44;
+        if (x % 4 == 7) {
+            y = true;
+        } else {
+            y = false;
+        }
+        System.out.println(y);
     }
 }
