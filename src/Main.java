@@ -1,5 +1,35 @@
-public class Main {
+import java.util.Scanner;
+
+class Main {
     public static void main(String[] args) {
-        System.out.println("Hello,word");
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Enter the month: ");
+        String scanData = scanner.next();
+
+
+        for (Month m : Month.values()) {
+            if (scanData.equalsIgnoreCase(m.name())) {
+                System.out.println(m.getSeason());
+                String a = String.valueOf(m.getSeason());
+
+            }
+        }
+        for (Season s : Season.values())
+            System.out.println(s + ": " + s.getDescription());
+
+        for (Month m : Month.values()) {
+            if (Season.SPRING == m.season)
+                System.out.println(m.name() + " -> " + m.days);
+        }
+
     }
 }
+
+/*
+1.Создать enum, который описывает сезоны года. Добавить поле description в этот enum.
+Добавить поле countOfDays в этот enum. Вывести на экран все константы сезоны года.
+2.Написать метод, который выводит следующий сезон от заданного во входном параметре.
+Входной параметр ввести с клавиатуры.
+3.Написать метод, который в зависимости от сезона, выводит на экран сумму дней в этом сезоне.
+Входной параметр ввести с клавиатуры.
+ */
